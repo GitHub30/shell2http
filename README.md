@@ -33,3 +33,5 @@ shell2http -p3000 /path 'canberra-gtk-play -i desktop-login'
 # Acknowledgements
 
 https://github.com/msoap/shell2http
+
+https://github.com/eshaan7/Flask-Shell2HTTP
