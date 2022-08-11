@@ -6,7 +6,7 @@ HTTP-server to execute shell commands. Designed for development, prototyping or 
 ```bash
 shell2http [options] ["shell command" for /] /path "shell command" /path2 "shell command2" ...
 options:
-    -p, --port NNNN        : port for http server ( default 8080 )
+    -p, --port NNNN : port for http server ( default 8080 )
 ```
 
 # Install
