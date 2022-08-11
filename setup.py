@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='shell2http',
-    version='1.2',
+    version='1.3',
     description='Executing shell commands via HTTP server',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
@@ -23,6 +23,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "License :: OSI Approved :: MIT License",
         "Topic :: Utilities",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
