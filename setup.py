@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='shell2http',
-    version='1.0',
+    version='1.1',
     description='Executing shell commands via HTTP server',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
@@ -38,5 +38,5 @@ setup(
 # Publish commands
 # https://packaging.python.org/tutorials/packaging-projects/
 #pip install --upgrade pip build twine
-#python -m build
-#python -m twine upload dist/*
+#python3 -m build
+#python3 -m twine upload dist/*
