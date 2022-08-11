@@ -30,6 +30,10 @@ shell2http 'shutdown -s -t 0'
 shell2http 'shutdown -s -t 0' /beep 'echo ^G'
 ```
 
+```powershell
+shell2http --port 3306  /beep 'echo ^G'
+```
+
 ## Linux
 
 ```bash
