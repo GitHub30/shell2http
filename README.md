@@ -26,6 +26,10 @@ pip install shell2http
 shell2http 'shutdown -s -t 0'
 ```
 
+```powershell
+shell2http 'shutdown -s -t 0' /beep 'echo ^G'
+```
+
 ## Linux
 
 ```bash
