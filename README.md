@@ -29,3 +29,7 @@ shell2http -p3000 'notify-send HelloRoot' /path 'canberra-gtk-play -i desktop-lo
 ```bash
 shell2http -p3000 /path 'canberra-gtk-play -i desktop-login'
 ```
+
+# Acknowledgements
+
+https://github.com/msoap/shell2http
