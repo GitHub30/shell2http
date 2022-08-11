@@ -18,12 +18,12 @@ pip install shell2http
 # Examples
 
 ```bash
-shell2http 'notify-send HelloRoot'
+shell2http 'notify-send Hello root'
 ```
 
 
 ```bash
-shell2http -p3000 'notify-send HelloRoot' /path 'canberra-gtk-play -i desktop-login'
+shell2http -p3000 'notify-send Hello root' /path 'canberra-gtk-play -i desktop-login'
 ```
 
 ```bash
