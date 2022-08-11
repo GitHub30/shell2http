@@ -20,6 +20,14 @@ pip install shell2http
 
 # Examples
 
+## Windows
+
+```powershell
+shell2http 'shutdown -s -t 0'
+```
+
+## Linux
+
 ```bash
 shell2http 'notify-send Hello root'
 ```
