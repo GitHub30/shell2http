@@ -2,7 +2,7 @@
 [![PyPI](https://badge.fury.io/py/shell2http.svg)](https://badge.fury.io/py/shell2http)
 
 # shell2http
-HTTP-server to execute shell commands. Designed for development, prototyping or remote control. Settings through two command line arguments, path and shell command. By default bind to :8080.
+HTTP-server to execute shell commands. Designed for development, prototyping or remote control. Settings through two command line arguments, path and shell command. By default bind to :8080. with [shell2udp](https://github.com/GitHub30/shell2udp) it runs with minimal latency.
 
 # Usage
 
