@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='shell2http',
-    version='1.8',
+    version='1.9',
     description='Executing shell commands via HTTP server',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
