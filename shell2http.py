@@ -25,7 +25,7 @@ def serve():
     global routes
     routes = dict(zip(args.command[0::2], args.command[1::2]))
     for path, command in routes.items():
-        print(f'http://localhost:{args.port}{path}', '#', command)
+        print(f'http://localhost:{args.port}{path}', command)
     with HTTPServer(('', args.port), ShellHTTPRequestHandler) as httpd:
         httpd.serve_forever()
 
