@@ -4,8 +4,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 routes = {}
 
-def shellHTTPRequestHandler(is_output)
-    print("is_output",is_output)
+def shellHTTPRequestHandler(is_output):
     class ShellHTTPRequestHandler(BaseHTTPRequestHandler):
         def do_GET(self):
             self.send_response(200)
@@ -23,7 +22,7 @@ def shellHTTPRequestHandler(is_output)
 
 def serve():
     parser = ArgumentParser()
-    parser.add_argument("-o","--output",action="store_true",help="Send back ouput")
+    parser.add_argument("-o","--output",action="store_true",help="Send back output")
     parser.add_argument('-p', '--port', default=8080, type=int)
     parser.add_argument('command', nargs='+')
     args = parser.parse_args()
@@ -35,7 +34,7 @@ def serve():
     routes = dict(zip(args.command[0::2], args.command[1::2]))
     for path, command in routes.items():
         print(f'http://localhost:{args.port}{path}', command)
-    with HTTPServer(('', args.port), shellHTTPRequestHandler(args.ouput)) as httpd:
+    with HTTPServer(('', args.port), shellHTTPRequestHandler(args.output)) as httpd:
         httpd.serve_forever()
 
 
