@@ -1,4 +1,5 @@
 import subprocess
+import io
 from argparse import ArgumentParser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
@@ -11,8 +12,9 @@ def shellHTTPRequestHandler(is_output):
             self.end_headers()
             if self.path in routes:
                 if(is_output):
-                    output = subprocess.Popen(routes[self.path], stdout=subprocess.PIPE, shell=True).communicate()[0].strip()
-                    self.wfile.write(output)
+                    proc = subprocess.Popen(routes[self.path], stdout=subprocess.PIPE, shell=True)
+                    for line in proc.stdout:
+                        self.wfile.write(line)
                 else:
                     subprocess.Popen(routes[self.path], shell=True)
 
