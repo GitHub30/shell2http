@@ -49,6 +49,10 @@ shell2http -p3000 'notify-send Hello root' /path 'canberra-gtk-play -i desktop-l
 shell2http -p3000 /path 'canberra-gtk-play -i desktop-login'
 ```
 
+```bash
+shell2http /info 'uname -a'
+```
+
 # Acknowledgements
 
 https://github.com/msoap/shell2http
