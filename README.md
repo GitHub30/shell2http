@@ -46,6 +46,12 @@ shell2http 'shutdown -s -t 0' /beep 'echo ^G'
 shell2http --port 3306 /beep 'powershell -command [Console]::Beep(440,2000)'
 ```
 
+http://localhost:8080/form?from=10&to=100
+
+```bash
+shell2http -output -form /form 'echo %v_from%, %v_to%'
+```
+
 ## Linux
 
 ```bash
