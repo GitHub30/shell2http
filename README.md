@@ -32,6 +32,8 @@ pip install shell2http
 
 ## Windows
 
+stop http server with `Ctrl` + `Pause/Break`
+
 ```powershell
 shell2http 'shutdown -s -t 0'
 ```
