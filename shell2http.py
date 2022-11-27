@@ -5,15 +5,15 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 routes = {}
 
-def shellHTTPRequestHandler(is_output):
+def shellHTTPRequestHandler(args):
     class ShellHTTPRequestHandler(BaseHTTPRequestHandler):
         def do_GET(self):
             self.send_response(200)
-            if is_output:
+            if args.sse:
                 self.send_header('Content-Type', 'text/event-stream')
             self.end_headers()
             if self.path in routes:
-                if is_output:
+                if args.output:
                     proc = subprocess.Popen(routes[self.path], stdout=subprocess.PIPE, shell=True)
                     for line in proc.stdout:
                         self.wfile.write(line)
@@ -27,6 +27,7 @@ def shellHTTPRequestHandler(is_output):
 def serve():
     parser = ArgumentParser()
     parser.add_argument("-o","--output",action="store_true",help="Send back output")
+    parser.add_argument("-s","--sse",action="store_true",help="Use Server Sent Events")
     parser.add_argument('-p', '--port', default=8080, type=int)
     parser.add_argument('command', nargs='+')
     args = parser.parse_args()
@@ -38,7 +39,7 @@ def serve():
     routes = dict(zip(args.command[0::2], args.command[1::2]))
     for path, command in routes.items():
         print(f'http://localhost:{args.port}{path}', command)
-    with HTTPServer(('', args.port), shellHTTPRequestHandler(args.output)) as httpd:
+    with HTTPServer(('', args.port), shellHTTPRequestHandler(args)) as httpd:
         httpd.serve_forever()
 
 
