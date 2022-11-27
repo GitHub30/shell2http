@@ -50,7 +50,11 @@ shell2http -p3000 /path 'canberra-gtk-play -i desktop-login'
 ```
 
 ```bash
-shell2http /info 'uname -a'
+shell2http --output /info 'uname -a'
+```
+
+```bash
+shell2http --output --sse /ping 'ping -c4 8.8.8.8'
 ```
 
 # Acknowledgements
