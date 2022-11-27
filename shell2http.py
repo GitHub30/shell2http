@@ -1,7 +1,7 @@
 import os
 import subprocess
-from urllib.parse import urlparse, parse_qs
 from argparse import ArgumentParser
+from urllib.parse import urlparse, parse_qs
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
