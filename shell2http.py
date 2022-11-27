@@ -22,6 +22,7 @@ def shellHTTPRequestHandler(args):
             parsed_url = urlparse(self.path)
             if args.sse:
                 self.send_header('Content-Type', 'text/event-stream')
+                args.output = True
             self.end_headers()
             if parsed_url.path == '/' and '/' not in routes and not args.no_index:
                 paths = list(routes.keys())
