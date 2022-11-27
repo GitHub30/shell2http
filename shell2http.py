@@ -55,7 +55,6 @@ def serve():
     parser.add_argument('-p', '--port', default=8080, type=int)
     parser.add_argument('command', nargs='+')
     args = parser.parse_args()
-    print(args)
 
     with HTTPServer(('', args.port), shellHTTPRequestHandler(args)) as httpd:
         httpd.serve_forever()
