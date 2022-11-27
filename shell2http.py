@@ -9,9 +9,11 @@ def shellHTTPRequestHandler(is_output):
     class ShellHTTPRequestHandler(BaseHTTPRequestHandler):
         def do_GET(self):
             self.send_response(200)
+            if is_output:
+                self.send_header('Content-Type', 'text/event-stream')
             self.end_headers()
             if self.path in routes:
-                if(is_output):
+                if is_output:
                     proc = subprocess.Popen(routes[self.path], stdout=subprocess.PIPE, shell=True)
                     for line in proc.stdout:
                         self.wfile.write(line)
