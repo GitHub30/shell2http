@@ -70,6 +70,8 @@ shell2http -output -sse /ping 'ping -c4 8.8.8.8'
 shell2http -add-exit pwd
 ```
 
+http://localhost:8080/form?from=10&to=100
+
 ```bash
 shell2http -output -form /form 'echo $v_from, $v_to'
 ```
