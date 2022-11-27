@@ -26,8 +26,8 @@ def shellHTTPRequestHandler(args):
 
 def serve():
     parser = ArgumentParser()
-    parser.add_argument("-o","--output",action="store_true",help="Send back output")
-    parser.add_argument("-s","--sse",action="store_true",help="Use Server Sent Events")
+    parser.add_argument("-o", "--output", action="store_true", help="Send back output")
+    parser.add_argument("--sse", action="store_true", help="Use Server Sent Events")
     parser.add_argument('-p', '--port', default=8080, type=int)
     parser.add_argument('command', nargs='+')
     args = parser.parse_args()
