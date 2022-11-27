@@ -35,15 +35,15 @@ pip install shell2http
 stop http server with `Ctrl` + `Pause/Break`
 
 ```powershell
-shell2http 'shutdown -s -t 0'
+shell2http "shutdown -s -t 0"
 ```
 
 ```powershell
-shell2http 'shutdown -s -t 0' /beep 'echo ^G'
+shell2http "shutdown -s -t 0" /beep "echo ^G"
 ```
 
 ```powershell
-shell2http --port 3306 /beep 'powershell -command [Console]::Beep(440,2000)'
+shell2http --port 3306 /beep "powershell -command [Console]::Beep(440,2000)"
 ```
 
 http://localhost:8080/form?from=10&to=100
