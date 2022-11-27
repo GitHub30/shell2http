@@ -7,7 +7,7 @@ HTTP-server to execute shell commands. Designed for development, prototyping or 
 # Usage
 
 ```bash
-shell2http [-h] [-form] [-add-exit] [-output] [-sse] [-p PORT] ["shell command" for /] /path "shell command" /path2 "shell command2" ...
+shell2http [-h] [-form] [-no-index] [-add-exit] [-output] [-sse] [-p PORT] ["shell command" for /] /path "shell command" /path2 "shell command2" ...
 
 positional arguments:
   command
@@ -15,6 +15,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -form                 parse query into environment vars
+  -no-index             do not generate index page
   -add-exit             add /exit command
   -output               send back output
   -sse                  use Server Sent Events
