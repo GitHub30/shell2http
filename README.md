@@ -39,7 +39,7 @@ shell2http "shutdown -s -t 0"
 ```
 
 ```powershell
-shell2http "shutdown -s -t 0" /beep "echo ^G"
+shell2http "shutdown -s -t 0" /beep "powershell -c echo `a"
 ```
 
 ```powershell
