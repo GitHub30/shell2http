@@ -85,6 +85,12 @@ http://localhost:8080/form?from=10&to=100
 shell2http -output -form /form 'echo $v_from, $v_to'
 ```
 
+html sufix to endpoint will change header to "text/html":
+```bash
+# Ability to have server events and server simple html pages as clients
+shell2http -output -sse /serve_files_as.html "cat LICENSE|sed 's/.*/<pre>&<\/pre>/'"
+```
+
 # Acknowledgements
 
 https://github.com/msoap/shell2http
