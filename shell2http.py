@@ -20,7 +20,10 @@ def shellHTTPRequestHandler(args):
         def do_GET(self):
             self.send_response(200)
             parsed_url = urlparse(self.path)
-            if args.sse:
+
+            if parsed_url.path.endswith("html"):
+                self.send_header('Content-Type', 'text/html')
+            elif args.sse:
                 self.send_header('Content-Type', 'text/event-stream')
                 args.output = True
             self.end_headers()
